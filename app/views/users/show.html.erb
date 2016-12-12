@@ -1,4 +1,9 @@
-<h1>
+<h1>View My Account</h1>
+<div>
   <%= gravatar_for @user %>
   <%= @user.name %>
-</h1>
+  <%= @profile.biography %>
+  <%= @profile.country %>
+  <%= @profile.state %>
+   (<%= link_to "edit" , edit_user_path(user) %>
+</div>
