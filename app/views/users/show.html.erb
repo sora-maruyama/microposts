@@ -1,9 +1,18 @@
-<h1>View My Account</h1>
-<div>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-  <%= @profile.biography %>
-  <%= @profile.country %>
-  <%= @profile.state %>
-   (<%= link_to "edit" , edit_user_path(user) %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    My情報
+    
+  </div>
+<t1>メールアドレス</t1>
+ 　　　<%=@user.email %>
+        <%= @user.biography %>
+        <%= @user.country %>
+        <%= @user.state %>
+  　 <%= link_to "edit" , edit_user_path(@user) %>
+      <br>
+   
+  </div>
 </div>
+<%= render 'form' %>
+
+
