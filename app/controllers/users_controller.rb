@@ -41,6 +41,7 @@ class UsersController < ApplicationController
   def following?(other_user)
     following_users.include?(other_user)
   end
+ 
   
   private
   
