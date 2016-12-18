@@ -7,12 +7,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.new
+    @user = User.find(params[:id])
   end
   
   def update
-    @user = User.new(user_params)
-    if @user.save
+    @user = User.find(params[:id])
+    if @user.update(user_params)
     redirect_to @user
      else
       render 'show'
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   
   def edit
+    @user = User.find(params[:id])
   end
   
   def create
@@ -47,8 +48,7 @@ end
 
   def check_user
     @user = User.find(params[:id])
-    if @user = current_user
-    else
+    if @user != current_user
       redirect_to root_path
     end
   end
