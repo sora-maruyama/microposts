@@ -1,18 +1,22 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    My情報
-    
-  </div>
-<t1>メールアドレス</t1>
- 　　　<%=@user.email %>
-        <%= @user.biography %>
-        <%= @user.country %>
-        <%= @user.state %>
-  　 <%= link_to "edit" , edit_user_path(@user) %>
-      <br>
+<h1>My情報</h1>
+
+  <div>
+<t1>メールアドレス:</t1>
+ <%= @user.email %>
+ 　　</div>
+ 　　  <div>
+<t1>プロファイル:</t1>
+  <%= @user.biography %>
+        　</div>
+        　<div>
+<t1>国:</t1>
+  <%= @user.country %>
+        　</div><br>
+        <div>
+<t1>都道府県:</t1>
+  <%= @user.state %>
+        　</div><br>
+  <%= link_to "My情報を編集する" , edit_user_path %><br>
+ 
    
   </div>
-</div>
-<%= render 'form' %>
-
-

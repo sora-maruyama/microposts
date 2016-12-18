@@ -11,14 +11,16 @@
       </ul>
     </div>
   <% end %>
+  メールアドレス:
+  <%= f.text_field :email, class: 'form-control' %>
 
   プロファイル:
   <%= f.text_area :biography, class: 'form-control' %>
 
-  Country:
+  国:
   <%= f.text_field :country, class: 'form-control' %>
   
-  State:
+  都道府県:
   <%= f.text_field :state, class: 'form-control' %>
   
   <%= f.submit class: "btn btn-sm btn-primary" %>

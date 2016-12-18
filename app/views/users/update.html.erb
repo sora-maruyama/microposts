@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+
+<t1>My情報</t1>
+
+
+<p>メールアドレス<%=@user.email %> </p>
+ 
+<p>プロファイル<%= @user.biography %> </p>
+
+<p>国<%= @user.country %> </p>
+
+<p>都道府県<%= @user.state %> </p>
+
+<%= link_to "Edit" , user_path(@user) %>
+
+
+   
+
+
+
